@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+	<xe:applicationLayout id="applicationLayout1"><xp:this.facets>
+	</xp:this.facets>
+		<xp:callback facetName="facet_1" id="content"></xp:callback>
+		<xe:this.configuration>
+			<xe:simpleResponsiveConfiguration fixedNavbar="fixed-top"
+				navbarText="#{javascript:@DbTitle()}">
+				<xe:this.navbarAppLinks>
+					<xe:pageTreeNode page="/Overview.xsp"
+						label="List">
+					</xe:pageTreeNode>
+					<xe:pageTreeNode page="/Hero.xsp" label="Create"></xe:pageTreeNode>
+				</xe:this.navbarAppLinks>
+			</xe:simpleResponsiveConfiguration>
+		</xe:this.configuration>
+	</xe:applicationLayout>
+	<xp:text escape="true" id="computedField1">
+		<xp:this.value><![CDATA[#{javascript:viewScope.get("page")}]]></xp:this.value>
+	</xp:text>
+</xp:view>

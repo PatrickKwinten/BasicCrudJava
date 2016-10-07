@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xc:ccLayout><xp:this.facets>
+	<xp:panel xp:key="facet_1">
+			<table class="squad">
+			<xp:repeat id="heroTable" value="#{page.allHeroes}" var="hero">
+				<xp:tr>
+					<td class="col1">
+						<xp:link escape="true" text="#{javascript:page.getDisplayText(hero)}"
+							value="#{javascript:page.getUrl(hero)}" />
+					</td>
+					<td class="col2">
+						<xp:button id="btnDelete" styleClass="btn-del">
+							<xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+								<xp:this.action><![CDATA[#{javascript:page.clickRemove(hero);}]]>
+								</xp:this.action>
+							</xp:eventHandler>
+							<span class="fa fa-trash-o fa-fw" />
+						</xp:button>
+					</td>
+				</xp:tr>
+			</xp:repeat>
+		</table>
+		<div class="btn-bar">
+			<xp:button id="btnNew" value="Create"
+				styleClass="btn btn-primary">
+				<xp:eventHandler event="onclick" submit="true"
+					refreshMode="complete">
+					<xp:this.action><![CDATA[#{javascript:page.clickNew();}]]>
+					</xp:this.action>
+				</xp:eventHandler>
+				
+			</xp:button>
+		</div>
+	
+	</xp:panel></xp:this.facets>
+
+	</xc:ccLayout>
+</xp:view>
+

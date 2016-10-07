@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xc:ccLayout><xp:this.facets>
+	<xp:panel xp:key="facet_1">
+	<div> <xp:label value="Species" for="species" /> </div>
+		<xp:inputText id="species" value="#{page.model.species}" />
+		<div> <xp:label value="Name" for="inputName" /> </div>
+		<xp:inputText id="inputName" value="#{page.model.name}" />
+		<div> <xp:label value="Superpower" for="inputPower" /> </div>
+		<xp:inputText id="inputTPower" value="#{page.model.power}" />
+		<div> <xp:label value="Description" for="inputDescription" /> </div>
+		<xp:inputTextarea id="inputDescription" value="#{page.model.description}" />
+
+		<div>
+		<xp:button id="btnBack" value="Back" styleClass="eknori-btn btn-back">
+				<xp:eventHandler event="onclick" submit="true"
+					refreshMode="complete" immediate="true" save="false">
+					<xp:this.action><![CDATA[#{javascript:page.clickBack()}]]></xp:this.action>
+				</xp:eventHandler>	<span />
+			</xp:button>
+
+			<xp:button id="btnSave" value="Save" styleClass="eknori-btn btn-save">
+				<xp:eventHandler event="onclick" submit="true"
+					refreshMode="complete" save="true">
+					<xp:this.action><![CDATA[#{javascript:page.clickSave()}]]></xp:this.action>
+				</xp:eventHandler>	<span />
+			</xp:button>
+		</div>
+	</xp:panel></xp:this.facets>
+		
+	</xc:ccLayout>
+</xp:view>
+
+
+

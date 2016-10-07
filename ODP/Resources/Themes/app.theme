@@ -1,0 +1,26 @@
+<theme extends="Bootstrap3_flat" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="platform:/plugin/com.ibm.designer.domino.stylekits/schema/stylekit.xsd">
+	<!-- 1. webstandard 2. oneui 3. notes -->
+	<control>
+		<name>ViewRoot</name>
+		<property>
+			<name>pageIcon</name>
+			<value>/logo.png</value>
+		</property>
+		<property>
+			<name>pageTitle</name>
+			<value>Superheroes</value>
+		</property>
+	</control>
+
+	<resource>
+		<content-type>text/css</content-type>
+		<href>style.css</href>
+	</resource>
+
+	<resource>
+		<content-type>text/css</content-type>
+		<href>font-awesome/css/font-awesome.min.css</href>
+	</resource>
+
+</theme>

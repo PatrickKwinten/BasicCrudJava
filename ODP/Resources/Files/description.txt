@@ -1,0 +1,10 @@
+Controller - AppController.java: puts the active view bean in viewscope "page". Is set as phaselistener in faces-config.xml.
+Model - Overview.java: defines which Dao to use (store in NSF, XML) -> set currently DoaNsf as Dao. Accessible as managed bean 'app' as defined in faces-congif.xml
+Model - DaoI.java: abstract layer for Data Object Access
+Model - DaoNsf.java: layer for object access in NSF
+Model - DaoXml.java: layer for object access in XML
+Model - Hero.java: Model for Hero objects
+View - HeroBean.java: Defines what actions to take. Also defines redirect path(s)
+View - Overview.java
+- Utils.java: mostly string utilities
+- UtilsJsf.java: JSF related utilities e.g. getUserName, scopeVariables, getComponent etc
